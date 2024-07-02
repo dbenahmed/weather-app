@@ -11,20 +11,22 @@
 
 <body class="w-screen h-screen flex items-center justify-center">
 
-  <div
-    class="bg-violet-800 text-white font-bold font-mono flex flex-col gap-2 items-center p-6 rounded-2xl w-2/3 h-fit ">
-    <h1 class="text-xl">Weather Infos:</h1>
+  <div class="bg-violet-800 text-white flex flex-col gap-2 items-center p-6 rounded-2xl w-2/3 h-fit ">
+    <h1 class="text-xl font-bold">Weather Infos:</h1>
     <input placeholder="Enter City Here" type="text"
       class="weather-input-js rounded-xl text-black p-1 pl-2 pr-2 transition ease-in hover:shadow-[0px_0px_30px_0px_rgba(255,0,0,0.1)]">
     <button class="search-button-js p-1 bg-violet-600 rounded-lg pr-3 pl-3">Search</button>
+    <h2 class="weather-info-title-js text-lg leading-none font-bold mt-2 hidden">Infos</h2>
+    <img src="" class="weather-icon-js hidden">
+    <p class="temp-info-js font-light leading-none text-xl hidden"></p>
+    <p class="weather-info-js leading-none font-light text-xl hidden"></p>
 
-    <h2 class="text-lg leading-none">Weather Infos</h2>
-    <p class="temp-info-js leading-none">23c</p>
-    <img src="" class="weather-icon-js">
-    <p class="weather-info-js leading-none">hot</p>
+    <h2 class="text-lg leading-none font-bold hidden">Weather Forecast</h2>
 
-    <h2 class="text-lg leading-none">Weather Forecast</h2>
-    <p class="weather-forecast-js leading-none"></p>
+    <div class="weather-forecast-js">
+
+    </div>
+
 
   </div>
 

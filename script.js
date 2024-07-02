@@ -49,16 +49,29 @@ async function getWeather() {
 }
 
 function displayWeather(data) {
+  const weatherInfoTitleElement = document.querySelector('.weather-info-title-js')
   const tempElement = document.querySelector('.temp-info-js')
   const weatherIconElement = document.querySelector('.weather-icon-js')
   const weatherInfoElement = document.querySelector('.weather-info-js')
 
-  console.log(data);
-  console.log(data.main.temp)
+  // Show elements
+  weatherInfoTitleElement.style.display = 'inline-block'
+  tempElement.style.display = 'inline-block'
+  weatherIconElement.style.display = 'inline-block'
+  weatherInfoElement.style.display = 'inline-block'
+
+  tempElement.innerHTML = `temperature is ${data.main.temp} C`
+  weatherIconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+  weatherInfoElement.innerHTML = `${data.weather[0].description}`
 }
 
 function displayForecast(data) {
   const weatherForecastElement = document.querySelector('.weather-forecast-js')
+  console.log(date.list)
+  data.list.forEach(date => {
+
+  })
 
 
 }
+
