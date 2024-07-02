@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .forecast {
   margin-top: 20px;
   display: flex;
