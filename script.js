@@ -67,11 +67,26 @@ function displayWeather(data) {
 
 function displayForecast(data) {
   const weatherForecastElement = document.querySelector('.weather-forecast-js')
-  console.log(date.list)
-  data.list.forEach(date => {
+  let html = '';
+  data.list.forEach(day => {
+    const time = day.dt;
+    const date = new Date(time * 1000)
+    const hour = turnToTwoDigits(date.getHours())
+    const minute = turnToTwoDigits(date.getMinutes());
+    html += `
+      <div class="forecast-day-container">
+      <p>${hour}:${minute}</p>
+      <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png">
+      <p >${day.main.temp}C</p>
+      </div>
+      `
 
   })
 
+  weatherForecastElement.innerHTML = html;
 
+}
+function turnToTwoDigits(number) {
+  if (number < 10) { return `0${number}` } else return `${number}`;
 }
 
